@@ -111,6 +111,15 @@ import SingleSelectTreeWidget, {
 import MultiSelectTreeWidget, {
   CONFIG as MULTI_SELECT_TREE_WIDGET_CONFIG,
 } from "widgets/MultiSelectTreeWidget";
+import InputWidgetV2, {
+  CONFIG as INPUT_WIDGET_V2_CONFIG,
+} from "widgets/InputWidgetV2";
+import PhoneInputWidget, {
+  CONFIG as PHONE_INPUT_WIDGET_V2_CONFIG,
+} from "widgets/PhoneInputWidget";
+import CurrencyInputWidget, {
+  CONFIG as CURRENCY_INPUT_WIDGET_V2_CONFIG,
+} from "widgets/CurrencyInputWidget";
 
 export const registerWidgets = () => {
   const start = performance.now();
@@ -155,6 +164,9 @@ export const registerWidgets = () => {
   registerWidget(MultiSelectTreeWidget, MULTI_SELECT_TREE_WIDGET_CONFIG);
   registerWidget(SingleSelectTreeWidget, SINGLE_SELECT_TREE_WIDGET_CONFIG);
   registerWidget(AudioWidget, AUDIO_WIDGET_CONFIG);
+  registerWidget(InputWidgetV2, INPUT_WIDGET_V2_CONFIG);
+  registerWidget(PhoneInputWidget, PHONE_INPUT_WIDGET_V2_CONFIG);
+  registerWidget(CurrencyInputWidget, CURRENCY_INPUT_WIDGET_V2_CONFIG);
 
   log.debug("Widget registration took: ", performance.now() - start, "ms");
 };
